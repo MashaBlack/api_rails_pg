@@ -24,6 +24,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_model_serializers (0.10.14)
+      actionpack (>= 4.1)
+      activemodel (>= 4.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.0.7.2)
       activesupport (= 5.0.7.2)
       globalid (>= 0.3.6)
@@ -33,14 +38,18 @@ GEM
       activemodel (= 5.0.7.2)
       activesupport (= 5.0.7.2)
       arel (~> 7.0)
+    activerecord-reset-pk-sequence (0.2.1)
     activesupport (5.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    brakeman (5.4.1)
     builder (3.2.4)
     byebug (11.1.3)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
@@ -50,6 +59,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    jsonapi-renderer (0.2.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -76,6 +86,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    pg (1.5.4)
     puma (3.12.6)
     racc (1.7.1)
     rack (2.2.8)
@@ -121,7 +132,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.7-x86_64-linux)
     thor (1.2.2)
     thread_safe (0.3.6)
     timeout (0.4.0)
@@ -135,13 +145,16 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_model_serializers
+  activerecord-reset-pk-sequence
+  brakeman
   byebug
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   tzinfo-data
 
 BUNDLED WITH

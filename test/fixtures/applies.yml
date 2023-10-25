@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_id: 1
+  geek_id: 1
+  read: false
+  invited: false
+
+two:
+  job_id: 1
+  geek_id: 1
+  read: false
+  invited: false
